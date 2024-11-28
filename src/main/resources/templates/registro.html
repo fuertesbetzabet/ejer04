@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro de Alumno</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="/registrar" method="post" th:object="${alumno}">
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required><br>
+
+        <label>Apellido Paterno:</label>
+        <input type="text" th:field="*{apellidoPaterno}" required><br>
+
+        <label>Apellido Materno:</label>
+        <input type="text" th:field="*{apellidoMaterno}" required><br>
+
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" th:field="*{fechaNacimiento}" required><br>
+
+        <label>Lugar de Residencia:</label>
+        <input type="text" th:field="*{lugarResidencia}" required><br>
+
+        <label>Edad:</label>
+        <input type="number" th:field="*{edad}" required><br>
+
+        <label>Teléfono:</label>
+        <input type="text" th:field="*{telefono}" required><br>
+
+        <label>Correo Electrónico:</label>
+        <input type="email" th:field="*{correoElectronico}" required><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
